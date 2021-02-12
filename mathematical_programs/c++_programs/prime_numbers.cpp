@@ -85,13 +85,20 @@ int main()
         return 0;
 }
 
+/*
+HERE ARE SOME ALGORITHES THAT CAM ALSO BE USED TO GET OR CHECK PRIME NUMBER
+
+https://www.geeksforgeeks.org/primality-test-set-1-introduction-and-school-method/
+https://www.geeksforgeeks.org/primality-test-set-2-fermet-method/
+https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
+https://www.geeksforgeeks.org/primality-test-set-4-solovay-strassen/
+https://www.geeksforgeeks.org/primality-test-set-5using-lucas-lehmer-series/
 
 
-
-
-
-
-
+most efficient algorithm is Sieve Of Eratosthenes 
+as it actually has the complexity O(n) which is less than the complexities 
+of all other algorithms.
+*/
 
 
 
