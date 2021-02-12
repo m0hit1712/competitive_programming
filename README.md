@@ -1,8 +1,8 @@
-# just competitive_programming
+# JUST COMPETITIVE PROGRAMMING
 
 ---
 
-### important links
+### IMPORTANT LINKS
 
 | link | about | content-type |
 |---|:---:|:---:|
