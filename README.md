@@ -1,6 +1,7 @@
 # JUST COMPETITIVE PROGRAMMING
 
 ---
+c++ | python
 
 ### IMPORTANT LINKS
 
