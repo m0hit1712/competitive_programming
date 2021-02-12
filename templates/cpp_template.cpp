@@ -1,7 +1,14 @@
 #include<bits/stdc++.h>
-#define loop(i, a, b) for (int i = a; i <= b; i++)
-#define par_loop(i,a,b,j,x,y) for (int i = a,j = x; i<=x, i<=y; i++, j++)
+#define loop(i, j, k, in) for (int i = j; i < k; i += in)
+#define rloop(i, j, k, in) for (int i = j; i >= k; i -= in)
+#define PI 3.1415926535897932384626433832795
+#define MAX 1e9
+#define MIN -1e9
 typedef long long int ll;
+typedef unsigned long long int ull;
+typedef float flt;
+typedef double dbl;
+//----------------------------------------------------------------------------------//
 int main()
 {
         /*
