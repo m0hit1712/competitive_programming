@@ -88,7 +88,7 @@ int main()
 /*
 HERE ARE SOME ALGORITHES THAT CAM ALSO BE USED TO GET OR CHECK PRIME NUMBER
 
-https://www.geeksforgeeks.org/primality-test-set-1-introduction-and-school-method/
+https://www.geeksforgeeks.org/primality-test-set-1-introduction-and-school-method
 https://www.geeksforgeeks.org/primality-test-set-2-fermet-method/
 https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
 https://www.geeksforgeeks.org/primality-test-set-4-solovay-strassen/
