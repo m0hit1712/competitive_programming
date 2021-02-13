@@ -77,8 +77,8 @@ void normal_iter_prime_series(int n)
 }
 int main()
 {
-        SieveOfEratosthenes(60,"upto");  // if you will pass 'upto' it will give the prime numbers less than the passed n      // time complexity O(n)
-        SieveOfEratosthenes(6, "first 6"); // if you pass anything in the string it will give the first n prime number          // time complexity O(MAX)
+        SieveOfEratosthenes(60,"upto");  // if you will pass 'upto' it will give the prime numbers less than the passed n      // time complexity O(n log(log n))
+        SieveOfEratosthenes(6, "first 6"); // if you pass anything in the string it will give the first n prime number
         printf("prime: %s\n", normal_is_prime(8)? "True" : "False");    //time complexity O(n)
         printf("prime: %s\n", optimal_is_prime(7) ? "True" : "False");  //time complexity O(n/4)
         normal_iter_prime_series(30); // it takes so much time if you will pass more than 30 your program will stuck         //time complexity O(n*(n/2)) 
@@ -94,10 +94,6 @@ https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
 https://www.geeksforgeeks.org/primality-test-set-4-solovay-strassen/
 https://www.geeksforgeeks.org/primality-test-set-5using-lucas-lehmer-series/
 
-
-most efficient algorithm is Sieve Of Eratosthenes 
-as it actually has the complexity O(n) which is less than the complexities 
-of all other algorithms.
 */
 
 
