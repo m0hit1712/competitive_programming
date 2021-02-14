@@ -1,36 +1,145 @@
 import sys
-def stdwrite(line): return sys.stdout.write(line+"\n")
+def stdwrite(line): return sys.stdout.write(line)
 
 
-class node:
-        data = 0
-        next = 0
-        def insert_at_beg(self):
-                pass
-        def insert_at_end(self):
-                pass
-        def insert_at_n(self):
-                pass
-        def delete_from_beg(self):
-                pass
-        def delete_from_end(self):
-                pass
-        def delete_from_n(self):
-                pass
-        def display(self):
-                pass
-        def custom_display(self):
-                pass
-        def reverse(self):
-                pass
+class SinglyLinkedList:
+    class __Node:
+        def __init__(self):
+            self.data = None
+            self.next = None
+
+        def set_data(self, data):
+            self.data = data
+
+        def get_data(self):
+            return self.data
+
+        def set_next(self, next):
+            self.next = next
+
+        def get_next(self):
+            return self.next
+    __head = None
+
+    def insert_at_beg(self, data):
+        if not SinglyLinkedList.__head:
+            new = self.__Node()
+            new.set_data(data)
+            SinglyLinkedList.__head = new
+        else:
+            new = self.__Node()
+            new.set_data(data)
+            new.set_next(SinglyLinkedList.__head)
+            SinglyLinkedList.__head = new
+
+    def insert_at_end(self, data):
+        if not SinglyLinkedList.__head:
+            new = self.__Node()
+            new.set_data(data)
+            SinglyLinkedList.__head = new
+        else:
+            new = self.__Node()
+            new.set_data(data)
+            temp = SinglyLinkedList.__head
+            while temp.get_next():
+                temp = temp.get_next()
+            temp.set_next(new)
+
+    def insert_at_n(self, data, n):
+        if not SinglyLinkedList.__head:
+            stdwrite("List is not create yet\n")
+            return False
+        elif n==1:
+            self.insert_at_beg(data)
+        else:
+            counter = 0
+            temp = SinglyLinkedList.__head
+            while temp.get_next():
+                temp = temp.get_next()
+                counter += 1
+                if counter==n-1:
+                    new = self.__Node()
+                    new.set_data(data)
+                    new.set_next(temp.get_next())
+                    temp.set_next(new)
+                    return True
+            stdwrite("This is index does not exist in the list\n")
+            return False
+
+    def delete_from_beg(self):
+        if not SinglyLinkedList.__head:
+            stdwrite("List is already empty\n")
+        else:
+            SinglyLinkedList.__head = SinglyLinkedList.__head.get_next()
+    def delete_from_end(self):
+        if not SinglyLinkedList.__head:
+            stdwrite("List is already empty\n")
+        else:
+            temp = SinglyLinkedList.__head
+            if not temp.get_next():
+                SinglyLinkedList.__head = None
+            else:
+                while temp.get_next().get_next():
+                    temp = temp.get_next()
+                temp.set_next(None)
+
+    def delete_from_n(self, n):
+        if not SinglyLinkedList.__head:
+            stdwrite("List is already empty\n")
+        elif n==1:
+            self.delete_from_beg()
+        else:
+            temp = SinglyLinkedList.__head
+            counter = 0 
+            while temp:
+                counter += 1
+                if counter == n-1:
+                    try: 
+                        temp.set_next(temp.get_next().get_next())
+                        return True
+                    except:
+                        stdwrite("This position does not exist\n")
+                        return False
+                temp = temp.get_next()
+            stdwrite("This position does not exist\n")
+
+    def display(self):
+        if not SinglyLinkedList.__head:
+            stdwrite("List is empty\n")
+        else:
+            stdwrite("Singly Linked List: head")
+            temp = SinglyLinkedList.__head
+            while temp:
+                stdwrite(" -> "+str(temp.get_data()))
+                temp = temp.get_next()
+            stdwrite("\n")
+    def __reverse(self, temp):
+        if temp==None:
+            return 
+        self.__reverse(temp.get_next())
+        stdwrite("<- "+str(temp.get_data())+" ")
+
+    def print_reverse(self):
+        if not SinglyLinkedList.__head:
+            stdwrite("The list is empty\n")
+        else:
+            stdwrite("Reverse Linked List: ")
+            temp = SinglyLinkedList.__head
+            self.__reverse(temp)
+            stdwrite("<- head")
 
 if __name__ == '__main__':
-        pass
-
-
-
-
-
-
-
-
+    li = SinglyLinkedList()
+    li.insert_at_beg(4)
+    li.insert_at_beg(5)
+    li.insert_at_beg(41)
+    li.insert_at_end(7)
+    li.insert_at_n(10, 2)
+    li.display()
+    li.delete_from_beg()
+    li.display()
+    li.delete_from_end()
+    li.display()
+    li.delete_from_n(1)
+    li.display()
+    li.print_reverse()
