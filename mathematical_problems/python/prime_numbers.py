@@ -50,7 +50,7 @@ def normal_iter_prime_series(n):
 
 if __name__ == "__main__":
         sieve_of_eratosthenes(504, "upto")
-        sieve_of_eratosthenes(50, "first 484")
+        sieve_of_eratosthenes(50, "first 50")
         stdwrite(str(normal_is_prime(4177)) +"\n")
         stdwrite(str(optimal_is_prime(4177)) +"\n")
         normal_iter_prime_series(45)

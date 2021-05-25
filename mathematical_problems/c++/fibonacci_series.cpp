@@ -1,10 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void recursive_approach(int n)
-{
-
-}
 void iterative_approach(int n)
 {
 
@@ -27,5 +23,6 @@ void optimal_nth_fibonacci(int number)
 }
 int main()
 {
+
         return 0;
 }
