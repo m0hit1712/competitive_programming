@@ -77,6 +77,7 @@ class SinglyLinkedList:
         else:
             SinglyLinkedList.__head = SinglyLinkedList.__head.get_next()
             self.display()
+
     def delete_from_end(self):
         if not SinglyLinkedList.__head:
             stdwrite("List is already empty\n")
